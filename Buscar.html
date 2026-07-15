@@ -405,7 +405,8 @@
   
   <div class="serie"
      data-id="569094"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Spider-Man: A través del Spider-Verso">
     <div class="poster">
         <a href="Movies/Mov002.html">
             <img src="">
@@ -1197,27 +1198,32 @@ async function cargarTMDB(){
         .then(r=>r.json())
         .then(datos=>{
 
-            const titulo =
+            // Nombre personalizado (si existe)
+const tituloManual = tarjeta.dataset.nombre?.trim();
+
+// Si no existe, usar TMDB
+const titulo =
+    tituloManual ||
     datos.title ||
     datos.name ||
     "Sin título";
 
-// Guardar el nombre completo para el buscador y el orden A-Z
+// Guardar el nombre completo para buscador y orden
 tarjeta.dataset.nombre = titulo;
 
-// Mostrar un título recortado si supera los 20 caracteres
+// Mostrar título recortado
 const tituloMostrar =
-    titulo.length > 25
-        ? titulo.substring(0, 25).trim() + "..."
+    titulo.length > 30
+        ? titulo.substring(0,30).trim() + "..."
         : titulo;
 
 tarjeta.querySelector(".titulo-serie").textContent = tituloMostrar;
 
-            const img = tarjeta.querySelector("img");
+// El póster sigue viniendo de TMDB
+const img = tarjeta.querySelector("img");
 
-            img.src = IMG + datos.poster_path;
-
-            img.alt = titulo;
+img.src = IMG + datos.poster_path;
+img.alt = titulo;
 
         });
 
