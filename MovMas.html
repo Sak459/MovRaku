@@ -252,13 +252,14 @@ go:236994L
 </div>
   
   <header>
-    <h1>Secion de Peliculas</h1>
+    <h1>Sección de Peliculas</h1>
   </header>
 
    <div class="catalogo">
     <div class="serie"
      data-id="1226863"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Super Mario Galaxy la película">
     <div class="poster">
         <a href="Movies/Mov001.html">
             <img>
@@ -269,7 +270,8 @@ go:236994L
 
     <div class="serie"
      data-id="569094"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Spider-Man: A través del Spider-Verso">
     <div class="poster">
         <a href="Movies/Mov002.html">
             <img>
@@ -887,23 +889,29 @@ async function cargarPeliculas(){
         .then(r=>r.json())
         .then(datos=>{
 
-            const titulo =
+            // Nombre personalizado (si existe)
+const tituloManual = tarjeta.dataset.nombre?.trim();
+
+// Si no existe, usar el de TMDB
+const titulo =
+    tituloManual ||
     datos.title ||
     datos.name ||
     "Sin título";
 
-// Mostrar un título recortado si supera los 20 caracteres
+// Mostrar un título recortado
 const tituloMostrar =
-    titulo.length > 25
-        ? titulo.substring(0, 25).trim() + "..."
+    titulo.length > 30
+        ? titulo.substring(0, 30).trim() + "..."
         : titulo;
 
 tarjeta.querySelector(".titulo-serie").textContent = tituloMostrar;
 
-            const img = tarjeta.querySelector("img");
+// Póster obtenido desde TMDB
+const img = tarjeta.querySelector("img");
 
-            img.src = IMG + datos.poster_path;
-            img.alt = titulo;
+img.src = IMG + datos.poster_path;
+img.alt = titulo;
 
         })
         .catch(console.error);
