@@ -118,11 +118,23 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform 0.4s ease;
+
+      background-color: #111;
+      background-image: url("https://appassets.androidplatform.net/assets/images/placeholder.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .poster img.loaded {
+      opacity: 1;
     }
 
     .poster img:hover {
-      transform: scale(1.04);
+      transform: none;
     }
 
     .titulo-serie {
@@ -142,22 +154,6 @@
       padding: 2rem;
       color: #aaa;
       display: none;
-    }
-    
-    /* Animación suave de entrada */
-    .serie {
-      animation: fadeIn 0.85s ease;
-    }
-
-    @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.96);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-       }
     }
 
     .modal-overlay {
@@ -332,7 +328,7 @@
       }
     }
 
-    @media (max-width: 400px) {
+    @media (max-width: 00px) {
       .catalogo {
         grid-template-columns: 1fr; /* Una sola columna en móviles */
       }
@@ -394,10 +390,12 @@
 <div class="catalogo" id="catalogo">  
   <div class="serie"
      data-id="1226863"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Super Mario Galaxy la película"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov001.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -406,10 +404,11 @@
   <div class="serie"
      data-id="569094"
      data-tipo="movie"
-     data-nombre="Spider-Man: A través del Spider-Verso">
+     data-nombre="Spider-Man: A través del Spider-Verso"
+     data-poster="https://image.tmdb.org/t/p/w500/iacLPcp2o2pClRToPjNAZjGhxAK.jpg">
     <div class="poster">
         <a href="Movies/Mov002.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -417,10 +416,12 @@
   
   <div class="serie"
      data-id="803796"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="KPop Demon Hunters"
+     data-poster="https://image.tmdb.org/t/p/w500/zT7Lhw3BhJbMkRqm9Zlx2YGMsY0.jpg">
     <div class="poster">
         <a href="Movies/Mov003.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -428,10 +429,12 @@
   
   <div class="serie"
      data-id="1273221"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Scary Movie (2026)"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov004.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -439,10 +442,11 @@
   
   <div class="serie"
      data-id="1202033"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Enola Holmes 3">
     <div class="poster">
         <a href="Movies/Mov005.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -450,10 +454,11 @@
   
   <div class="serie"
      data-id="447365"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Guardianes de la Galaxia: Volumen 3">
     <div class="poster">
         <a href="Movies/Mov006.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -461,10 +466,11 @@
   
   <div class="serie"
      data-id="301528"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Toy Story 4">
     <div class="poster">
         <a href="Movies/Mov007.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -472,10 +478,11 @@
   
   <div class="serie"
      data-id="1242898"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Depredador: Tierras salvajes">
     <div class="poster">
         <a href="Movies/Mov008.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -483,10 +490,12 @@
   
   <div class="serie"
      data-id="10191"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Cómo Entrenar A Tu Dragón"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov009.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -494,10 +503,12 @@
   
   <div class="serie"
      data-id="82702"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Cómo Entrenar A Tu Dragón 2"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov010.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -505,10 +516,11 @@
   
   <div class="serie"
      data-id="166428"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Cómo Entrenar A Tu Dragón 3">
     <div class="poster">
         <a href="Movies/Mov011.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -516,10 +528,12 @@
   
   <div class="serie"
      data-id="1087192"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Cómo Entrenar A Tu Dragón (2025)"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov012.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -527,10 +541,12 @@
   
   <div class="serie"
      data-id="638507"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Cómo Entrenar A Tu Dragón Vuelta a Casa"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov013.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -538,10 +554,12 @@
   
   <div class="serie"
      data-id="931285"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Mortal Kombat II"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov014.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -549,10 +567,12 @@
   
   <div class="serie"
      data-id="324857"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Spider-Man: Un Nuevo Universo"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov015.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -560,10 +580,12 @@
   
   <div class="serie"
      data-id="263115"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Logan"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov016.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -571,10 +593,12 @@
   
   <div class="serie"
      data-id="945961"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Alien: Romulus"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov017.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -582,10 +606,12 @@
   
   <div class="serie"
      data-id="100402"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Capitán América y el Soldado del Invierno"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov018.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -593,10 +619,12 @@
   
   <div class="serie"
      data-id="98"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Gladiator"
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov019.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -604,10 +632,12 @@
   
   <div class="serie"
      data-id="335984"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov020.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -615,21 +645,25 @@
   
   <div class="serie"
      data-id="447332"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Un Lugar En Silencio"
+     data-poster="https://image.tmdb.org/t/p/w500/up1Awcd25rJHDy267K1IYNSslne.jpg">
     <div class="poster">
         <a href="Movies/Mov021.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
   </div>
   
   <div class="serie"
-     data-id="520763"
-     data-tipo="movie">
+     data-id="447332"
+     data-tipo="movie"
+     data-nombre="Un lugar en silencio: Parte II"
+     data-poster="https://image.tmdb.org/t/p/w500/t0Ldrbhd1hwMYJ8KrkORPZl5Sbv.jpg">
     <div class="poster">
         <a href="Movies/Mov022.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -637,10 +671,12 @@
   
   <div class="serie"
      data-id="1159559"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov023.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -648,10 +684,12 @@
   
   <div class="serie"
      data-id="58574"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov024.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -659,10 +697,12 @@
   
   <div class="serie"
      data-id="44115"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov025.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -670,10 +710,12 @@
   
   <div class="serie"
      data-id="533535"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Deadpool & Wolverine"
+     data-poster="https://image.tmdb.org/t/p/w500/6aY3OzCIdxoBMYdiH5s17rWFFFA.jpg">
     <div class="poster">
         <a href="Movies/Mov026.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -681,10 +723,12 @@
   
   <div class="serie"
      data-id="1895"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov027.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -692,10 +736,12 @@
   
   <div class="serie"
      data-id="58"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov028.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -703,10 +749,12 @@
   
   <div class="serie"
      data-id="37135"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov029.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -714,10 +762,12 @@
   
   <div class="serie"
      data-id="49026"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Batman: El caballero de la noche asciende"
+     data-poster="https://image.tmdb.org/t/p/w500/uG4D95vfcZ3SQc7AMpvQCy2kfCT.jpg">
     <div class="poster">
         <a href="Movies/Mov030.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -725,10 +775,12 @@
   
   <div class="serie"
      data-id="597"
-     data-tipo="tv">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
-        <a href="Series/Mov031.html">
-            <img src="">
+        <a href="Movies/Mov031.html">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -736,10 +788,12 @@
   
   <div class="serie"
      data-id="1579"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov032.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -747,10 +801,12 @@
   
   <div class="serie"
      data-id="395"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov033.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -758,10 +814,12 @@
   
   <div class="serie"
      data-id="502356"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov034.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -769,10 +827,12 @@
   
   <div class="serie"
      data-id="1234821"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov035.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -780,10 +840,12 @@
   
   <div class="serie"
      data-id="1061474"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov036.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -791,10 +853,12 @@
   
   <div class="serie"
      data-id="552524"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov037.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -802,10 +866,12 @@
   
   <div class="serie"
      data-id="1071585"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov038.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -813,10 +879,12 @@
   
   <div class="serie"
      data-id="573435"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov039.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -824,10 +892,12 @@
   
   <div class="serie"
      data-id="1011477"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov040.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -835,10 +905,12 @@
   
   <div class="serie"
      data-id="555604"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
         <a href="Movies/Mov041.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -846,307 +918,90 @@
   
   <div class="serie"
      data-id="969681"
-     data-tipo="movie">
+     data-tipo="movie"
+     data-nombre="Spider-Man: Un nuevo día"
+     data-poster="https://image.tmdb.org/t/p/w500/GUVYjqDLWy61q9hDYiV9M5UEJe.jpg">
     <div class="poster">
         <a href="Movies/Mov042.html">
-            <img src="">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
   </div>
   
   <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
+     data-id="200875"
+     data-tipo="tv"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
+        <a href="Series/Seri001.html">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
   </div>
   
   <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
+     data-id="100088"
+     data-tipo="tv"
+     data-nombre=""
+     data-poster="">
     <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
+        <a href="Series/Seri002.html">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
   </div>
   
   <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
+     data-id="100088"
+     data-tipo="movie"
+     data-nombre="The Last of Us: Season 2"
+     data-poster="https://image.tmdb.org/t/p/w500/lbHSHrgBPl0gQAcS0lHIcyp1CnZ.jpg">
     <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
+        <a href="Series/Seri003.html">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
   </div>
   
   <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
+     data-id="969681"
+     data-tipo="movie"
+     data-nombre="Resident Evil: Noche cero"
+     data-poster="https://image.tmdb.org/t/p/w500/ntmaNFJ7O60n45E1E6HZlXeSV5e.jpg">
     <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
+        <a href="Movies/Mov043.html">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
   </div>
   
   <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
+     data-id="940721"
+     data-tipo="movie"
+     data-nombre="Godzilla Minus One"
+     data-poster="https://image.tmdb.org/t/p/w500/5EANtRFXIv4LND2hhsHXATpCegy.jpg">
     <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
+        <a href="Movies/Mov044.html">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
   </div>
   
   <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
+     data-id="1368337"
+     data-tipo="movie"
+     data-nombre="La Odisea"
+     data-poster="https://image.tmdb.org/t/p/w500/sRxbUe5FB25Gde0e2FnwwSckpXb.jpg">
     <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
-        </a>
-    </div>
-    <div class="titulo-serie"></div>
-  </div>
-  
-  <div class="serie"
-     data-id="569094"
-     data-tipo="movie">
-    <div class="poster">
-        <a href="Movies/Mov002.html">
-            <img src="">
+        <a href="Movies/Mov045.html">
+            <img decoding="async" alt="">
         </a>
     </div>
     <div class="titulo-serie"></div>
@@ -1177,61 +1032,376 @@ const mensajeVacio = document.getElementById("mensaje-vacio");
 const filtroLetras = document.getElementById("filtroLetras");
 const catalogo = document.getElementById("catalogo");
 const loading = document.getElementById("loading");
+const PLACEHOLDER = "https://appassets.androidplatform.net/assets/images/placeholder.jpeg";
+
+/* ================= CACHÉ TMDB ================= */
+
+const CACHE_VERSION = "v1";
+const CACHE_KEY = "rakuen_tmbd_cache_" + CACHE_VERSION;
+
+const CACHE_DURATION = 30 * 24 * 60 * 60 * 1000;
+
+function obtenerCache(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(CACHE_KEY)
+        ) || {};
+
+    }catch(e){
+
+        console.log("Error leyendo caché:", e);
+
+        return {};
+
+    }
+
+}
+
+
+function guardarCache(cache){
+
+    try{
+
+        localStorage.setItem(
+            CACHE_KEY,
+            JSON.stringify(cache)
+        );
+
+    }catch(e){
+
+        console.log("Error guardando caché:", e);
+
+    }
+
+}
+
+
+/* ================= CARGAR TMDB ================= */
 
 async function cargarTMDB(){
 
-    const tarjetas = document.querySelectorAll(".serie");
+    const tarjetas =
+        Array.from(document.querySelectorAll(".serie"));
 
-    const promesas = [];
+    const cache = obtenerCache();
 
-    tarjetas.forEach(async tarjeta=>{
+    const nuevasPeticiones = [];
+
+
+    tarjetas.forEach(tarjeta => {
 
         const id = tarjeta.dataset.id;
         const tipo = tarjeta.dataset.tipo;
 
         if(!id || !tipo) return;
 
-        const url =
-        `${TMDB}/${tipo}/${id}?api_key=${API_KEY}&language=es-ES`;
 
-        const p = fetch(url)
-        .then(r=>r.json())
-        .then(datos=>{
+        const cacheId = `${tipo}_${id}`;
 
-            // Nombre personalizado (si existe)
-const tituloManual = tarjeta.dataset.nombre?.trim();
+        const almacenado = cache[cacheId];
 
-// Si no existe, usar TMDB
-const titulo =
-    tituloManual ||
-    datos.title ||
-    datos.name ||
-    "Sin título";
+/* ================= CACHE VÁLIDA ================= */
 
-// Guardar el nombre completo para buscador y orden
-tarjeta.dataset.nombre = titulo;
+        if(
+            almacenado &&
+            almacenado.timestamp &&
+            (Date.now() - almacenado.timestamp)
+                < CACHE_DURATION
+        ){
 
-// Mostrar título recortado
-const tituloMostrar =
-    titulo.length > 30
-        ? titulo.substring(0,30).trim() + "..."
-        : titulo;
+            aplicarDatosTMDB(
+                tarjeta,
+                almacenado.data
+            );
 
-tarjeta.querySelector(".titulo-serie").textContent = tituloMostrar;
+            return;
 
-// El póster sigue viniendo de TMDB
-const img = tarjeta.querySelector("img");
+        }
 
-img.src = IMG + datos.poster_path;
-img.alt = titulo;
+/* ================= NUEVA PETICIÓN ================= */
 
+        nuevasPeticiones.push({
+            tarjeta,
+            id,
+            tipo,
+            cacheId
         });
-
-        promesas.push(p);
 
     });
 
-    await Promise.all(promesas);
+
+    if(nuevasPeticiones.length === 0){
+
+        console.log(
+            "✅ Todas las series fueron cargadas desde caché"
+        );
+
+        return;
+
+    }
+
+
+    console.log(
+        `🔄 ${nuevasPeticiones.length} series nuevas necesitan TMDB`
+    );
+
+
+    const TAMANO_GRUPO = 10;
+
+
+    for(
+        let i = 0;
+        i < nuevasPeticiones.length;
+        i += TAMANO_GRUPO
+    ){
+
+        const grupo =
+            nuevasPeticiones.slice(
+                i,
+                i + TAMANO_GRUPO
+            );
+
+
+        await Promise.all(
+
+            grupo.map(async item => {
+
+                const {
+                    tarjeta,
+                    id,
+                    tipo,
+                    cacheId
+                } = item;
+
+
+                const url =
+                    `${TMDB}/${tipo}/${id}?api_key=${API_KEY}&language=es-ES`;
+
+
+                try{
+
+                    const respuesta =
+                        await fetch(url);
+
+
+                    if(!respuesta.ok){
+
+                        throw new Error(
+                            `TMDB HTTP ${respuesta.status}`
+                        );
+
+                    }
+
+
+                    const datos =
+                        await respuesta.json();
+
+                    cache[cacheId] = {
+
+                        timestamp: Date.now(),
+
+                        data: datos
+
+                    };
+
+                    aplicarDatosTMDB(
+                        tarjeta,
+                        datos
+                    );
+
+
+                }catch(error){
+
+                    console.log(
+                        `❌ Error TMDB ${id}:`,
+                        error
+                    );
+
+                }
+
+            })
+
+        );
+
+
+        guardarCache(cache);
+
+    }
+
+
+    console.log("✅ Carga TMDB finalizada");
+
+}
+
+
+/* ================= APLICAR DATOS ================= */
+
+function aplicarDatosTMDB(tarjeta, datos){
+
+    if(!datos) return;
+
+    const tituloManual =
+        tarjeta.dataset.nombre?.trim();
+
+    const titulo =
+        tituloManual ||
+        datos.title ||
+        datos.name ||
+        "Sin título";
+
+    tarjeta.dataset.nombre = titulo;
+
+    const tituloMostrar =
+        titulo.length > 30
+            ? titulo.substring(0,30).trim() + "..."
+            : titulo;
+
+    const tituloElemento =
+        tarjeta.querySelector(".titulo-serie");
+
+    if(tituloElemento){
+        tituloElemento.textContent = tituloMostrar;
+    }
+
+    /* ================= POSTER ================= */
+
+    const img = tarjeta.querySelector("img");
+
+    if(!img) return;
+
+    const posterManual =
+        tarjeta.dataset.poster?.trim();
+
+    const posterTMDB =
+        datos.poster_path
+            ? IMG + datos.poster_path
+            : "";
+
+    const posterURL =
+        posterManual || posterTMDB;
+
+    if(!posterURL){
+        img.removeAttribute("src");
+        delete img.dataset.src;
+        img.classList.remove("loaded");
+        return;
+    }
+
+    const posicion = series.indexOf(tarjeta);
+
+    /* ================= PRIMERAS 50 ================= */
+
+    if(posicion < 50){
+
+        img.loading = "eager";
+        img.decoding = "async";
+
+        cargarPosterConAnimacion(img, posterURL);
+
+        return;
+    }
+
+    /* ================= RESTO ================= */
+
+    img.loading = "lazy";
+    img.decoding = "async";
+
+    img.dataset.src = posterURL;
+
+    cargarImagenLazy(img);
+}
+
+/* ================= CARGA DE POSTERS ================= */
+
+function cargarPosterConAnimacion(img, url){
+
+    if(!img || !url) return;
+
+    img.classList.remove("loaded");
+
+    const nuevaImagen = new Image();
+
+    nuevaImagen.onload = function(){
+
+        img.src = url;
+
+        requestAnimationFrame(() => {
+            img.classList.add("loaded");
+        });
+
+    };
+
+    nuevaImagen.onerror = function(){
+
+        img.removeAttribute("src");
+        img.classList.remove("loaded");
+
+        img.style.backgroundImage =
+            `url("${PLACEHOLDER}")`;
+
+    };
+
+    nuevaImagen.src = url;
+}
+
+
+/* ================= LAZY LOAD ================= */
+
+function cargarImagenLazy(img){
+
+    if(!img) return;
+
+    if("IntersectionObserver" in window){
+
+        const observer =
+            new IntersectionObserver(
+                entries => {
+
+                    entries.forEach(entry => {
+
+                        if(!entry.isIntersecting) return;
+
+                        const imagen = entry.target;
+
+                        if(imagen.dataset.src){
+
+                            cargarPosterConAnimacion(
+                                imagen,
+                                imagen.dataset.src
+                            );
+
+                            delete imagen.dataset.src;
+
+                        }
+
+                        observer.unobserve(imagen);
+
+                    });
+
+                },
+                {
+                    rootMargin: "300px"
+                }
+            );
+
+        observer.observe(img);
+
+    }else{
+
+        if(img.dataset.src){
+
+            cargarPosterConAnimacion(
+                img,
+                img.dataset.src
+            );
+
+            delete img.dataset.src;
+
+        }
+
+    }
 
 }
 
@@ -1244,7 +1414,7 @@ function hideLoading() {
 }
 
 
-const LIMITE_INICIAL = 240;
+const LIMITE_INICIAL = 250;
 let modoInicial = true;
 let filtroLetraActiva = '';
 let ordenActual = '';
@@ -1361,51 +1531,9 @@ function aplicarFiltros() {
 
     aplicarFiltros();
 
-    const imagenes =
-    document.querySelectorAll(".poster img");
-
-    let cargadas = 0;
-
-    imagenes.forEach(img=>{
-
-        if(img.complete){
-
-            cargadas++;
-
-            if(cargadas===imagenes.length)
-                hideLoading();
-
-        }else{
-
-            img.onload =
-            img.onerror = ()=>{
-
-                cargadas++;
-
-                if(cargadas===imagenes.length)
-                    hideLoading();
-
-            };
-
-        }
-
-    });
+    hideLoading();
 
 })();
-
-let cargadas = 0;
-
-imagenes.forEach(img => {
-    if (img.complete) {
-        cargadas++;
-        if (cargadas === imagenes.length) hideLoading();
-    } else {
-        img.onload = img.onerror = () => {
-            cargadas++;
-            if (cargadas === imagenes.length) hideLoading();
-        };
-    }
-});
 </script>
 <script>
   const modal = document.getElementById("connectionModal");
